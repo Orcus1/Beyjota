@@ -36,6 +36,7 @@ body {
 }
 
 /* ENCABEZADO */
+
 header {
     background-color: var(--light-white);
     display: flex;
@@ -43,7 +44,7 @@ header {
 
 #logo {
     font-size: 2.5em;
-    padding: 0rem 0.5rem ;
+    padding: 0rem 0.5rem;
 }
   
 #logo:hover {
@@ -128,23 +129,23 @@ nav ul li {
 }
 
 .navElementActive1 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
 }
 
 .navElementActive2 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
 }
 
 .navElementActive3 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
 }
 
 .navElementActive4 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
 }
 
 @-webkit-keyframes text-pop-up-bottom {
@@ -181,14 +182,15 @@ nav ul li {
     }
 }
 
+.stopAnimation:hover {
+    -webkit-animation: none;
+    animation: none;
+}
+
 nav ul li a {
     font-size: 1.4em;
     color: rgba(0, 0, 0, 0.8) !important;
     text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: rgba(0, 0, 0, 1) !important;
 }
 
 .telefono-contacto {
@@ -236,6 +238,7 @@ nav ul li a:hover {
     width: 30px;
     height: 30px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bars__menu span {
@@ -264,23 +267,128 @@ nav ul li a:hover {
 
 /* CONTENIDO PRINCIPAL */
 
+main {
+    background: rgb(38,38,40);
+    background: linear-gradient(256deg, rgba(38,38,40,1) 0%, rgba(157,146,146,1) 50%, rgba(217,206,206,1) 100%);
+    background-size: 300% 100%;
+    border-bottom-right-radius: 3rem;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .sub-main {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100vw;
-    height: 80vh;
-
+    height: 70vh;
 }
 
 h2 {
-    font-size: 2em;
-    margin: 2rem auto;
+    font-size: 1.8em;
+    margin: 3rem auto;
+    width: 87vw;
+    padding: 1rem 0;
+    border: black 3px solid;
+    border-radius: 1px;
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
-  
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+}
+
+h2:hover {
+    background-color: rgba(24, 78, 119, 0.1);
+}
+
 h4 {
-    color: rgba(230, 230, 230, 0.8);
+    color: rgba(58, 54, 54, 0.8);
     font-size: 1.5em;
+    margin-bottom: 2rem;
+    -webkit-animation: wobble-hor-bottom 0.8s 2s both;
+    animation: wobble-hor-bottom 0.8s 2s both;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
 }
 
 
