@@ -22,6 +22,10 @@ body {
     overflow-x: hidden;
 }
 
+a:active {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .oscurecerOff {
     display: none;
 }
@@ -61,35 +65,10 @@ nav {
     position: absolute;
     left: -100vw;
     width: 100vw;
-    height: 60vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     border-bottom-right-radius: 20px;
-}
-
-nav::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 95%;
-    height: 5px;
-    background-color: rgb(45, 45, 45);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-nav::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 5px;
-    height: 95%;
-    background-color: rgb(45, 45, 45);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
 }
 
 nav ul {
@@ -100,52 +79,28 @@ nav ul {
     padding: 2.2rem 0 !important;
 }
 
-nav ul::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 5px;
-    height: 95%;
-    background-color: rgb(45, 45, 45);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-nav ul::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 95%;
-    height: 5px;
-    background-color: rgb(45, 45, 45);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
 nav ul li {
     padding: 1.2rem 3rem;
 }
 
 .navElementActive1 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
 
 .navElementActive2 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
 
 .navElementActive3 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
 
 .navElementActive4 {
-    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    -webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
 
 @-webkit-keyframes text-pop-up-bottom {
@@ -194,7 +149,7 @@ nav ul li a {
 }
 
 .telefono-contacto {
-    margin: 1rem 0;
+    margin: 1rem 0 3rem 0;
     color: var(--color-principal);
     font-size: 1.2em;
     text-decoration: none;
@@ -267,7 +222,7 @@ nav ul li a {
 
 /* CONTENIDO PRINCIPAL */
 
-main {
+.main {
     background: rgb(38,38,40);
     background: linear-gradient(256deg, rgba(38,38,40,1) 0%, rgba(157,146,146,1) 50%, rgba(217,206,206,1) 100%);
     background-size: 300% 100%;
@@ -295,15 +250,15 @@ main {
     height: 70vh;
 }
 
-h2 {
+.l-and-p {
     font-size: 1.8em;
     margin: 3rem auto;
     width: 87vw;
     padding: 1rem 0;
     border: black 3px solid;
     border-radius: 1px;
-    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -319,16 +274,12 @@ h2 {
     }
 }
 
-h2:hover {
-    background-color: rgba(24, 78, 119, 0.1);
-}
-
-h4 {
-    color: rgba(58, 54, 54, 0.8);
+.lema {
+    color: rgba(58, 54, 54, 1);
     font-size: 1.5em;
     margin-bottom: 2rem;
-    -webkit-animation: wobble-hor-bottom 0.8s 2s both;
-    animation: wobble-hor-bottom 0.8s 2s both;
+    -webkit-animation: wobble-hor-bottom 0.8s 3s both;
+    animation: wobble-hor-bottom 0.8s 3s both;
 }
 
 @-webkit-keyframes wobble-hor-bottom {
@@ -391,21 +342,193 @@ h4 {
     }
 }
 
+/* SOBRE NOSOTROS SECCIÓN */
+#sobreNosotros {
+    background-color: rgb(190, 190, 190);
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+
+/* PRODUCTOS SECCIÓN */
+
+.div_productos-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.productos-titulo {
+    margin: 1.5rem 0;
+    font-size: 2em;
+    text-transform: capitalize;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+  
+
+.div-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.productos {
+    width: 49vw;
+    min-height: 33vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0.50rem auto 0.25rem auto;
+    border: 1px rgba(0, 0, 0, 0.3) solid;
+    background-color: grey;
+}
+
+.imagen {
+    min-height: 70%;
+    background-color: var(--light-white);
+}
+
+.info {
+    min-height: 30%;
+    background-color: var(--light-white);
+    border-top: 1px rgba(0, 0, 0, 0.3) solid;
+}
+
+.nombre-producto {
+    font-size: 0.90em;
+    text-transform: uppercase;
+    margin: 0.25rem 0.25rem 0.5rem 0.25rem;
+}
+
+.div_precio {
+    display: flex;
+    justify-content: end;
+    margin: 0.5rem 0 0 0;
+}
+
+.precio {
+    margin: auto 0.25rem 0.25rem 0;
+}
+
+.div_pagina-selector {
+    margin: 2.5rem 0 1rem 0;
+}
+
+.pagina-selector {
+    min-width: 55vw;
+    max-width: 60vw;
+    border-radius: 5px;
+    margin: 0 auto;
+    border: 2px rgba(0, 0, 0, 0.3) solid;
+    display: flex;
+    justify-content: center;
+}
+
+.selector {
+    font-size: 2.65em;
+    color: black;
+    margin: auto 0.25rem;
+    text-decoration: none;
+    padding: 0 0.25rem;
+}
+
+.selector:active {
+    background-color: var(--grey_light-white);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.selector-activo {
+    font-size: 3em;
+    background-color: var(--grey_light-white);
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    border-radius: 5px;
+}
 
 /* PIE DE PAGINA */
 
-footer a {
+footer {
+    background-color: rgb(200, 200, 200);
+    margin: 1rem 0 0 0;
+    border-top-right-radius: 5rem;
+}
+
+.whatsapp-link {
     position: fixed;
     z-index: 9;
     bottom: 0.5rem;
     right: 0.5rem;
     background-color: rgb(37, 211, 102);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer a img {
+.whatsapp-img {
     width: 4rem;
     height: 4rem;
+}
+  
+.logoFooter {
+    font-size: 2.25em;
+    padding: 1rem;
+}
+  
+.pFooter {
+    padding: 0 1rem;
+    font-size: 1.35em;
+}
+  
+.contacto {
+    display: flex;
+    flex-direction: row;
+}
+  
+.contacto__div {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+  
+.contacto__div__img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.whatsapp-logo-contacto {
+    background-color: rgb(37, 211, 102);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 769px) {
