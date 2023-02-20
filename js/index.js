@@ -23,3 +23,38 @@ function animateBars(){
     navElement3.classList.toggle("navElementActive3");
     navElement4.classList.toggle("navElementActive4");
 }
+
+
+/* PREGUNTA Y RESPUESTA 1 */ 
+
+document.querySelector(".pregunta1").addEventListener("click", desplegarRespuesta1);
+
+var preguntayrespuesta1 = document.querySelector(".preguntayrespuesta1")
+var displayblock1 = document.querySelector(".displayblock1")
+
+function desplegarRespuesta1(){
+    preguntayrespuesta1.classList.toggle("activepreguntayrespuesta1");
+    displayblock1.classList.toggle("activedisplayblock1");
+}
+
+
+/* PREGUNTA Y RESPUESTA 2 */ 
+
+document.querySelector(".pregunta2").addEventListener("click", desplegarRespuesta2);
+
+var displayblock2 = document.querySelector(".displayblock2")
+
+function desplegarRespuesta2(){
+    displayblock2.classList.toggle("activedisplayblock2");
+}
+
+
+/* PREGUNTA Y RESPUESTA 3 */ 
+
+document.querySelector(".pregunta3").addEventListener("click", desplegarRespuesta3);
+
+var displayblock3 = document.querySelector(".displayblock3")
+
+function desplegarRespuesta3(){
+    displayblock3.classList.toggle("activedisplayblock3");
+}

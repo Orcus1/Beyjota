@@ -343,14 +343,88 @@ nav ul li a {
 }
 
 /* SOBRE NOSOTROS SECCIÓN */
+
 #sobreNosotros {
-    background-color: rgb(190, 190, 190);
+    background: rgb(117, 117, 136);
+    background: linear-gradient(256deg, rgba(117, 117, 136, 1) 0%, rgba(194, 179, 179, 1) 50%, rgb(228, 220, 220) 100%);
+    background-size: 300% 100%;
+    animation: gradient 10s ease infinite;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
     margin: 2rem 0;
     padding: 2rem;
 }
 
+.preguntayrespuesta {
+    border: black 3px solid;
+    margin: 1.5rem 1rem 1.5rem 0;
+    border-radius: 8px;
+} 
+
+.pregunta {
+    font-size: 1.625em;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 1rem 0 1rem 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pregunta:active {
+    background-color: transparent;
+}
+
+.respuesta {
+    font-size: 1.375em;
+    margin: 1rem 1.25rem;
+    display: none;
+}
+
+.activedisplayblock1 {
+    display: block;
+    -webkit-animation: scale-up-ver-top 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
+	animation: scale-up-ver-top 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
+}
+
+.activedisplayblock2 {
+    display: block;
+    -webkit-animation: scale-up-ver-top 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
+	animation: scale-up-ver-top 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
+}
+
+.activedisplayblock3 {
+    display: block;
+    -webkit-animation: scale-up-ver-top 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
+	animation: scale-up-ver-top 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
+}
+
+@-webkit-keyframes scale-up-ver-top {
+    0% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scale-up-ver-top {
+    0% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+  }
 
 /* PRODUCTOS SECCIÓN */
 
@@ -363,8 +437,8 @@ nav ul li a {
     margin: 1.5rem 0;
     font-size: 2em;
     text-transform: capitalize;
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
-	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
 }
 
 @-webkit-keyframes text-focus-in {
@@ -401,7 +475,7 @@ nav ul li a {
 
 .productos {
     width: 49vw;
-    min-height: 33vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -410,15 +484,41 @@ nav ul li a {
     background-color: grey;
 }
 
+.productos-768 {
+    display: none;
+}
+
 .imagen {
     min-height: 70%;
     background-color: var(--light-white);
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenproducto {
+    width: 100%;
+    height: 100%;
+}
+
+.imagenproducto2 {
+    width: 90%;
+    height: 90%;
+}
+
+.imagenproducto3 {
+    width: 110%;
+    height: 110%;
 }
 
 .info {
     min-height: 30%;
     background-color: var(--light-white);
     border-top: 1px rgba(0, 0, 0, 0.3) solid;
+    padding: 0.25rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .nombre-producto {
@@ -429,8 +529,8 @@ nav ul li a {
 
 .div_precio {
     display: flex;
-    justify-content: end;
-    margin: 0.5rem 0 0 0;
+    justify-content: flex-end;
+    margin: 0;
 }
 
 .precio {
@@ -504,7 +604,7 @@ footer {
   
 .pFooter {
     padding: 0 1rem;
-    font-size: 1.35em;
+    font-size: 1.5em;
 }
   
 .contacto {
@@ -529,6 +629,21 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .div-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .productos {
+        width: 32vw;
+        min-height: 33vh;
+    }
+
+    .productos-768 {
+        display: block;
+    }
 }
 
 @media (min-width: 769px) {
