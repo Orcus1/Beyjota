@@ -148,7 +148,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-.telefono-contacto {
+.telefono-contacto-menu {
     margin: 1rem 0 3rem 0;
     color: var(--color-principal);
     font-size: 1.2em;
@@ -223,11 +223,11 @@ nav ul li a {
 /* CONTENIDO PRINCIPAL */
 
 .main {
-    background: rgb(38,38,40);
-    background: linear-gradient(256deg, rgba(38,38,40,1) 0%, rgba(157,146,146,1) 50%, rgba(217,206,206,1) 100%);
+    background: rgb(34, 81, 117);
+    background: linear-gradient(256deg, rgba(34, 81, 117,1) 0%, rgb(60, 93, 116) 50%, rgb(120, 149, 165) 100%);
     background-size: 300% 100%;
     border-bottom-right-radius: 3rem;
-    animation: gradient 10s ease infinite;
+    animation: gradient 8s ease infinite;
 }
 
 @keyframes gradient {
@@ -246,40 +246,24 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     width: 100vw;
     height: 70vh;
 }
 
-.l-and-p {
-    font-size: 1.8em;
-    margin: 3rem auto;
-    width: 87vw;
-    padding: 1rem 0;
-    border: black 3px solid;
-    border-radius: 1px;
-    -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-  }
-  @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
+.beyjotaLogo {
+    margin: 1.5rem 1rem 1rem 1rem;
+    width: 70vw;
+    height: 17vh;
 }
 
 .lema {
-    color: rgba(58, 54, 54, 1);
-    font-size: 1.5em;
+    color: rgb(27, 26, 26);
+    font-size: 1.625em;
     margin-bottom: 2rem;
     -webkit-animation: wobble-hor-bottom 0.8s 3s both;
     animation: wobble-hor-bottom 0.8s 3s both;
+    margin: 1rem;
 }
 
 @-webkit-keyframes wobble-hor-bottom {
@@ -317,7 +301,7 @@ nav ul li a {
     100% {
         -webkit-transform: translateX(0%);
         transform: translateX(0%);
-      -webkit-transform-origin: 50% 50%;
+        -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
     15% {
@@ -341,6 +325,31 @@ nav ul li a {
         transform: translateX(-6px) rotate(-1.2deg);
     }
 }
+
+.l-and-p {
+    font-size: 1.8em;
+    margin: 2rem auto;
+    width: 87vw;
+    padding: 1rem 0;
+    border: black 3px solid;
+    border-radius: 1px;
+    -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+}
+
 
 /* SOBRE NOSOTROS SECCIÓN */
 
@@ -606,6 +615,29 @@ footer {
     padding: 0 1rem;
     font-size: 1.5em;
 }
+
+.separador {
+    margin: 1.5rem 0.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.divisor {
+    width: 42.5vw;
+    height: 0.4rem;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(30, 30, 30);
+}
+
+.circulo {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: auto;
+    border-radius: 100%;
+    background-color: rgb(30, 30, 30);
+}
   
 .contacto {
     display: flex;
@@ -617,37 +649,46 @@ footer {
     display: flex;
     flex-direction: column;
 }
-  
-.contacto__div__img {
-    width: 3.5rem;
-    height: 3.5rem;
+
+.p-contacto {
+    font-size: 2em;
 }
 
-.whatsapp-logo-contacto {
-    background-color: rgb(37, 211, 102);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.telefono-contacto {
+    color: var(--color-principal);
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.3em;
+    text-decoration: none;
 }
 
-@media (min-width: 768px) {
-    .div-productos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .productos {
-        width: 32vw;
-        min-height: 33vh;
-    }
-
-    .productos-768 {
-        display: block;
-    }
+.mail {
+    font-size: 1.3em;
+    margin: 1rem 0 1rem 0;
 }
 
-@media (min-width: 769px) {
-    .bars__menu {
-        display: none;
-    }
+.mail-link {
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.facebook-link {
+    font-size: 1.3em;
+    margin: 1rem 0 1rem 0;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.creditos {
+    background-color: var(--grey_light-white);
+}
+
+.creditos-p {
+    font-size: 1.3em;
+    padding: 1.5rem 1rem;
+    max-width: 80vw;
+}
+
+.creditos-link {
+    color: black;
+    text-decoration: none;
 }
