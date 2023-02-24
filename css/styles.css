@@ -223,8 +223,8 @@ nav ul li a {
 /* CONTENIDO PRINCIPAL */
 
 .main {
-    background: rgb(34, 81, 117);
-    background: linear-gradient(256deg, rgba(34, 81, 117,1) 0%, rgb(60, 93, 116) 50%, rgb(120, 149, 165) 100%);
+    background: rgb(15, 139, 199);
+    background: linear-gradient(256deg, rgba(15, 139, 199, 1) 0%, rgb(61, 154, 201) 50%, rgb(150, 178, 190) 100%);
     background-size: 300% 100%;
     border-bottom-right-radius: 3rem;
     animation: gradient 8s ease infinite;
@@ -458,22 +458,24 @@ nav ul li a {
     font-size: 1.3em;
     margin: 1.25rem auto;
     text-decoration: none;
-    border-bottom: 2.5px black solid;
+    border-bottom: 2px black solid;
 }
 
 .linkPaginasProductos:hover {
-    -webkit-animation: none;
-    animation: none;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .div_productos-titulo {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .productos-titulo {
     margin: 1.5rem 0;
     font-size: 2em;
+    width: auto;
     text-transform: capitalize;
     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
 	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.5s both;
@@ -538,16 +540,7 @@ nav ul li a {
 .imagenproducto {
     width: 100%;
     height: 100%;
-}
-
-.imagenproducto2 {
-    width: 90%;
-    height: 90%;
-}
-
-.imagenproducto3 {
-    width: 110%;
-    height: 110%;
+    padding: 0.5rem;
 }
 
 .info {
@@ -613,9 +606,12 @@ nav ul li a {
 /* PIE DE PAGINA */
 
 footer {
-    background-color: rgb(200, 200, 200);
+    background: rgb(15, 139, 199);
+    background: linear-gradient(256deg, rgba(15, 139, 199, 1) 0%, rgb(61, 154, 201) 50%, rgb(150, 178, 190) 100%);
+    background-size: 300% 100%;
     margin: 1rem 0 0 0;
     border-top-right-radius: 5rem;
+    animation: gradient 8s ease infinite;
 }
 
 .whatsapp-link {
@@ -637,7 +633,7 @@ footer {
   
 .logoFooter {
     font-size: 2.25em;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 }
   
 .pFooter {
@@ -684,7 +680,7 @@ footer {
 }
 
 .telefono-contacto {
-    color: var(--color-principal);
+    color: rgba(0, 0, 0, 0.9);
     margin: 1.5rem 0 1rem 0;
     font-size: 1.3em;
     text-decoration: none;
@@ -697,14 +693,14 @@ footer {
 
 .mail-link {
     text-decoration: none;
-    color: var(--color-principal);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .facebook-link {
     font-size: 1.3em;
     margin: 1rem 0 1rem 0;
     text-decoration: none;
-    color: var(--color-principal);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .creditos {
@@ -719,5 +715,7 @@ footer {
 
 .creditos-link {
     color: black;
+    border-bottom: 2px black solid;
+    padding-top: 5px;
     text-decoration: none;
 }
