@@ -4,7 +4,7 @@
 }
 
 :root {
-    --color-principal: #184E77;
+    --color-principal: rgb(15, 139, 199);
     --color-secundario: #35856e;
     --color-textos: rgba(0, 0, 0, 0.9);
     --light-white: rgb(235, 235, 235);
@@ -60,7 +60,11 @@ header {
     text-decoration: none;
 }
 
-nav {
+.menupc {
+    display: none;
+}
+
+.menu {
     background-color: var(--grey_light-white);
     position: absolute;
     left: -100vw;
@@ -71,15 +75,15 @@ nav {
     border-bottom-right-radius: 20px;
 }
 
-nav ul {
+.menu ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
-    padding: 2.2rem 0 !important;
+    padding: 2.2rem 0;
 }
 
-nav ul li {
+.menu ul li {
     padding: 1.2rem 3rem;
 }
 
@@ -144,7 +148,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 1.4em;
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
 }
 
@@ -253,7 +257,6 @@ nav ul li a {
 
 .beyjotaLogo {
     margin: 1.5rem 1rem 1rem 1rem;
-    width: 70vw;
     height: 17vh;
 }
 
@@ -597,7 +600,6 @@ nav ul li a {
 
 .selector-activo {
     font-size: 3em;
-    background-color: var(--grey_light-white);
     padding: 0 1.25rem;
     margin: 0 auto;
     border-radius: 5px;
@@ -703,6 +705,11 @@ footer {
     color: rgba(0, 0, 0, 0.9);
 }
 
+.envio {
+    font-size: 1.4em;
+    margin: 1rem 0 1rem 0;
+}
+
 .creditos {
     background-color: var(--grey_light-white);
 }
@@ -718,4 +725,166 @@ footer {
     border-bottom: 2px black solid;
     padding-top: 5px;
     text-decoration: none;
+}
+
+@media (min-width: 768px) {
+
+    nav ul li a {
+        font-size: 1.625em;
+    }
+
+    .telefono-contacto-menu {
+        font-size: 1.5em;
+    }
+
+    .beyjotaLogo {
+        height: 22.5vh;
+    }
+
+    .lema {
+        font-size: 1.75em;
+    }
+
+    .l-and-p {
+        width: 75vw;
+    }
+
+    .preguntayrespuesta {
+        width: 75vw;
+        margin: 1.5rem auto;
+    }
+
+    .logoFooter {
+        font-size: 3em;
+    }
+
+    .pFooter {
+        font-size: 1.75em;
+    }
+
+    .p-contacto {
+        font-size: 2.5em;
+    }
+    
+    .telefono-contacto {
+        font-size: 1.5em;
+    }
+    
+    .mail {
+        font-size: 1.5em;
+    }
+    
+    .facebook-link {
+        font-size: 1.5em;
+    }
+
+    .envio {
+        font-size: 1.625em;
+    }
+
+    .linkPaginasProductos {
+        font-size: 1.5em;
+    }
+
+    .productos-titulo {
+        font-size: 2.5em;
+    }
+
+    .div-productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .productos {
+        width: 32vw;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #logo {
+        font-size: 2.75em;
+        padding: 0rem 0.75rem;
+    }
+
+    .bars__menu {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menupc {
+        display: block;
+        margin: auto;
+    }
+
+    .menupc ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 2.2rem 0;
+        margin: auto;
+    }
+    
+    .menupc ul li {
+        margin: auto 1.35rem;
+    }
+
+    .menupc ul li a {
+        position: relative;
+    }
+
+    .menupc ul li a:hover {
+        color: black;
+    }
+
+    .nav__menu__li__links::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.15rem;
+        background-color: var(--color-principal);
+        transition: 0.6s;
+    }
+
+    .nav__menu__li__links::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0.15rem;
+        background-color: var(--color-principal);
+        transition: 0.6s;
+    }
+
+    .nav__menu__li:hover .nav__menu__li__links::before {
+        width: 50%;
+        transform: translate(100%);
+    }
+
+    .nav__menu__li:hover .nav__menu__li__links::after {
+        width: 50%;
+        transform: translate(-100%);
+    }
+
+    .div-productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .productos {
+        width: 24vw;
+    }
+}
+
+@media (min-width: 1248px) {
+    .menupc ul li {
+        margin: auto 2.25rem;
+    }
 }
